@@ -1,0 +1,43 @@
+---
+## NamePlugin: SuperOptimization
+## Version: 0.1
+Api-Software: 3.0.0
+## ---------------------------------------------------------------
+##                    Auto-Restart 2019-2020@
+##-------------------------------------------------------
+## 1-2 is Normal ##
+delay: 60
+## Ip/Port is normal ##
+serverIp: default
+serverPort: 19132
+message: Server will restarting in %value% min(s).
+##                    Clear-Lag    2019-2020@
+##-------------------------------------------------------
+# Time for clearlagg event!
+seconds: 300
+# Entities to clear
+clear:
+  entities-items: true
+  entities-mobs: false ## Enter true if needed!
+  exempt: 
+  # Array of entities not to clear
+  - Zombie
+  - Pig
+# Countdown times
+times: [50, 25, 15, 10, 5, 4, 3, 2, 1]
+## ---------------------------------------------------------------
+# auto delete old crash dumps
+delete-files: false
+# how long crash dumps should remain untouched (in hours), only needed if delete-files is true
+validity-duration: 24
+
+# report crash dumps to a discord channel
+report-crash: false
+# announces a crash report. This prevents a crash being overlooked due to the plugin malfunctioning
+announce-crash-report: true
+# This plugin assumes that the server folder name is an informative description of the server
+# If this isn't the case, you can enable the usage of the full server path to ensure an unambiguous crash report
+announce-full-path: false
+# webhook url obtained from discord
+webhook-url: ""
+...

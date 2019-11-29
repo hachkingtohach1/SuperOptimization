@@ -1,0 +1,12 @@
+name: SuperOptimization
+author: DragoVN - Goldenra -Slater
+version: 0.1
+main: DragoVN\main
+api: [3.0.0]
+
+commands:
+  superoptimization:
+    usage: /superoptimization [---]
+    description: "Open menu ui for superoptimization."    
+    permission: super.optimization
+    default: op
