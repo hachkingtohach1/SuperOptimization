@@ -1,4 +1,6 @@
-#  <img src="https://hachkingtohach1/SuperOptimization/blob/master/icon.png?raw=true" alt="Logo" title="Aimeos" align="center" height="120" />
+<p align="center">
+  <img src="https://hachkingtohach1/SuperOptimization/blob/master/icon.png?raw=true"/>
+</p>
 # SuperOptimization
 Plugin optimized for every server running on Pocketmine-MP [Genuine]! 
 # Features
