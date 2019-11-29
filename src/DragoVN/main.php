@@ -65,6 +65,7 @@ class main extends PluginBase implements Listener {
 	private $breakTimes = [];
 	//-----------------------------------------------------------------------------
     public function onEnable(){
+	    $this->checkFormAPI();
 		$this->checkOldCrashDumps();
 	    if (!is_dir($this->getDataFolder())){
             mkdir($this->getDataFolder());
@@ -124,6 +125,15 @@ class main extends PluginBase implements Listener {
             }else if(in_array($this->seconds, $this->times)){}
         }), 20);
     }//$this->cfg->get('Language')
+	
+    public function checkFormAPI(){
+         $this->formapi = $this->getServer()->getPluginManager()->getPlugin("FormAPI");
+         if(is_null($this->formapi)){
+               $this->getLogger()->info("§aThe plugin is off because you have not installed FormAPI.");
+               $this->getLogger()->info("§cIf you do not install a lot of errors can occur!");
+               $this->getServer()->dispatchCommand(new ConsoleCommandSender(), "stop");
+	 }
+    }
 	
 	//-----------------------------------------------------------------------------
     public function clearItems2($sender){
