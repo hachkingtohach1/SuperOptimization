@@ -254,21 +254,6 @@ class main extends PluginBase implements Listener {
 
 		$this->getLogger()->info('Checks finished');
 	}		
-	
-	// Can crash server! this is error(1)!
-	public function deletecrashdump() {
-	  $dir = "crashdumps"; 
-      if (is_dir($dir)) {
-      $objects = scandir($dir); 
-      foreach ($objects as $object) { 		
-         $files = array_map('unlink', glob("crashdumps/*.log")); 
-         foreach ($files as $file) { 
-         if (is_file($file)) unlink($file); 
-		 }  
-      rmdir("crashdumps"); 
-	  }
-	  }
-	}
 
 	private function reportCrashDump(CrashDumpReader $crashDumpReader): void{
 		if($crashDumpReader->hasRead()){
