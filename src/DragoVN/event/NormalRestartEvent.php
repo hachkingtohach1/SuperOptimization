@@ -20,4 +20,3 @@ class NormalRestartEvent extends Event implements Cancellable{
         $this->plugin->delay = $mins;
     }
 }
-?>
