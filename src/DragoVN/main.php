@@ -337,4 +337,3 @@ class main extends PluginBase implements Listener {
     $form->sendToPlayer($sender);
 	}	
 }
-?>
