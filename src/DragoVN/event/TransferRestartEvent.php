@@ -18,4 +18,3 @@ class TransferRestartEvent extends Event{
         return $this->players;
     }
 }
-?>
