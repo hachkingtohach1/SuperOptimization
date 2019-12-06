@@ -17,4 +17,4 @@ class TransferRestartEvent extends Event{
     public function getTransferredPlayers() : array{
         return $this->players;
     }
-}
+}##
