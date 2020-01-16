@@ -17,7 +17,7 @@ class CheckTimesTask extends Task{
     }
     public function onRun(int $currentTick) : void{
         if($this->plugin->delay === 0){
-            $this->plugin->restart($this->plugin->getServer(), main::$serverIp, main::$serverPort);}else{
+            $this->plugin->autorestart($this->plugin->getServer(), main::$serverIp, main::$serverPort);}else{
             if($this->plugin->delay > 5){
                if($this->plugin->delay % 10 === 0){
                   if($this->plugin->message !== ""){
