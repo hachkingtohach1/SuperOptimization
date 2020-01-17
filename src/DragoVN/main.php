@@ -179,10 +179,7 @@ class main extends PluginBase implements Listener {
 	}
 	//--------------------- 2: AutoRestart! ---------------------//
 	public static function autorestart(Server $server, ?string $serverIp = "default", ?int $serverPort = 19132){
-        var_dump((int) $server->getApiVersion());
-        if(version_compare($server->getApiVersion(), $this->config->get("Api-Software")) >= 0){
-        $serverIp = $serverIp === "default" ? Internet::getIp() : $serverIp;}else{
-		$serverIp = $serverIp === "default" ? Utils::getIp() : $serverIp;}
+        var_dump((int) $server->getApiVersion());        
         $server->getPluginManager()->callEvent($event = new event\TransferRestartEvent($server->getPluginManager()->getPlugin("SuperOptimization")));
         if($event->isCancelled()){
            return true;}else{
