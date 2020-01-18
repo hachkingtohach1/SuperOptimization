@@ -179,18 +179,7 @@ class main extends PluginBase implements Listener {
 	}
 	//--------------------- 2: AutoRestart! ---------------------//
 	public static function autorestart(Server $server, ?string $serverIp = "default", ?int $serverPort = 19132){
-        var_dump((int) $server->getApiVersion());        
-        $server->getPluginManager()->callEvent($event = new event\TransferRestartEvent($server->getPluginManager()->getPlugin("SuperOptimization")));
-        if($event->isCancelled()){
-           return true;}else{
-           $transferred = [];
-           foreach ($server->getOnlinePlayers() as $players){$transferred[] = $players->getName();$players->transfer($serverIp, $serverPort);
-		   }$server->getPluginManager()->callEvent($event = new event\NormalRestartEvent($transferred));
-           register_shutdown_function(function () {
-              pcntl_exec("./start.sh"); // use for Linux VM or Ubuntu box, ...
-		   });
-        $server->shutdown();
-        }
+            $server->shutdown();
 	}
 	//Source from:  https://poggit.pmmp.io/ci/SalmonDE/CrashLogger
 	//--------------------- 3: Remove CrashDump! ---------------------//
