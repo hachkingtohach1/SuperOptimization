@@ -266,7 +266,7 @@ class main extends PluginBase implements Listener {
 	public function onCommand(CommandSender $sender, Command $cmd, string $label, array $args):bool
     {
        switch($cmd->getName()){		 
-		case "superoptimization":
+		case "spo":
 		   if(!$sender->hasPermission("super.optimization")){
 				$sender->sendMessage(TextFormat::RED."You do not have permission to use it!");
 				return true;
