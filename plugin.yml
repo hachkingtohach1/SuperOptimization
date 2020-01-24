@@ -5,7 +5,7 @@ main: DragoVN\main
 api: [3.0.0]
 
 commands:
-  superoptimization:
+  spo:
     usage: /spo [---]
     description: "Open menu ui for superoptimization."    
     permission: super.optimization
